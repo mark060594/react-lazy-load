@@ -9,7 +9,12 @@ import styles from "../../styles/styles.module.css";
 //Context
 import { ProductContext } from "../ProductCard/ProductCard";
 
-export const ProductImage = ({ img = "" }) => {
+export interface Props {
+  img?:string;
+  className?:string;
+}
+
+export const ProductImage = ({ img, className}:Props) => {
 
 
     const { product } = useContext(ProductContext);
@@ -25,7 +30,7 @@ export const ProductImage = ({ img = "" }) => {
     }
   
     return (
-      <img className={styles.productImg} src={imgToShow} alt="Product Image" />
+      <img className={`${styles.productImg} ${className}`} src={imgToShow} alt="Product Image" />
     );
   };
 
