@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, CSSProperties } from 'react';
 
 //Styles
 import styles from "../../styles/styles.module.css";
@@ -8,6 +8,7 @@ import { ProductContext } from '../ProductCard/ProductCard';
 
 export interface Props {
   className?:string;
+  style?:CSSProperties;
 }
 
 
